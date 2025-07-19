@@ -108,7 +108,7 @@ void Reshape(int w, int h)
 
 void GameLoop(int value)
 {
-    BOARD = handleLoop(BOARD, BOARD_SIZE, BORDER_LENGTH);
+    handleLoop(BOARD, BOARD_SIZE, BORDER_LENGTH);
     GAME_OVER = checkGameOver(BOARD, BOARD_SIZE);
     glutPostRedisplay();
     glutTimerFunc(value, GameLoop, value);

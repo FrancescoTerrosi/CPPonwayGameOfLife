@@ -130,20 +130,19 @@ void gameLoop(int* next_board, int* board, int board_size, int border_length)
     for (int i = 0; i < board_size; i++) {
         checkProximities(i, next_board, board, board_size, border_length);
     }
+    memcpy(board, next_board, sizeof(int)*board_size);
 }
 
-int* handleLoop(int* board, int board_size, int border_length)
+void handleLoop(int* board, int board_size, int border_length)
 {
 
-    int* nextBoard = new int[board_size];
+    int nextBoard[board_size];
 
     for (int i = 0; i < board_size; i++) {
         nextBoard[i] = 0;
     }
 
     gameLoop(nextBoard, board, board_size, border_length);
-
-    return nextBoard;
 
 }
 
