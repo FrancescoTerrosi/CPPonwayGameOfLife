@@ -2,7 +2,13 @@
 
 Implementation of Conway's Game of Life in C++ using OpenGL and GLUT libraries.
 
-The program asks the user to input a population number and a timestep refresh (in milliseconds)
+## Dependencies
+
+```
+$ sudo apt install libopengl-dev libglut-dev
+```
+
+To build the project, from the root folder:
 
 ```
 $ mkdir build; cd build;
@@ -13,4 +19,6 @@ $ cmake --build .
 
 $ ./Conway
 ```
+
+The program asks the user to input a population number and a timestep refresh (in milliseconds)
 
